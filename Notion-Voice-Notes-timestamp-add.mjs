@@ -635,6 +635,10 @@ export default {
 										this.whisper_prompt && this.whisper_prompt !== ""
 											? this.whisper_prompt
 											: `Hello, welcome to my lecture.`,
+									// add the timestamp_granularities property 
+									response_format: "verbose_json",
+									// must also change the response_format -> verbose_json
+									timestamp_granularities: ["segment"]
 								},
 								{
 									maxRetries: 5,
